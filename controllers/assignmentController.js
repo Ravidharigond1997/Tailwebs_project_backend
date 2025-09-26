@@ -99,7 +99,6 @@ export const submitAnswer = async (req, res, next) => {
     assignment.answer = answer;
     assignment.submittedBy = req.user.id;
     assignment.submittedDate = new Date();
-    assignment.status = "Completed";
 
     await assignment.save();
 
